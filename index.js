@@ -33,7 +33,7 @@ function reaper (url, product) {
         await page.click('a.pagination__next', { waitUntil: 'networkidle0' });
         await page.waitForSelector('a.pagination__next');
       }
-      
+
       browser.close();
       return resolve(`${totalQuantitySold} ${product} were sold.`);
     } catch (e) {
